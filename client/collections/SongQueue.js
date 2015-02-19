@@ -10,17 +10,17 @@ var SongQueue = Songs.extend({
   initialize: function(){
   },
 
-  enqueue: function(song){
+  // enqueue: function(song){
 
 
 
-    //do something with the song
-    //somehow add it to the queue
-    //update currentSong to the one at the top
-    //
-  },
+  //   //do something with the song
+  //   //somehow add it to the queue
+  //   //update currentSong to the one at the top
+  //   //
+  // },
 
-  dequeue: function(song){
-    //somehow remove it from the queue
-  }
+  // dequeue: function(song){
+  //   //somehow remove it from the queue
+  // }
 });

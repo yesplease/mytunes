@@ -16,7 +16,7 @@ var AppView = Backbone.View.extend({
 
 
     // this.model.get('songQueue').on('change', function(model){
-    //   console.log('We know we heard the change in the queue', model);
+    //   console.log('We know we heard the change in the queue');
     //   //this.queueView.render(); - this isn't right
     // }, this);
 
