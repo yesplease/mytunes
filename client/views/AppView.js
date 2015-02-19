@@ -14,15 +14,10 @@ var AppView = Backbone.View.extend({
       this.playerView.setSong(model.get('currentSong'));
     }, this);
 
-
     // this.model.get('songQueue').on('change', function(model){
     //   console.log('We know we heard the change in the queue');
     //   //this.queueView.render(); - this isn't right
     // }, this);
-
-    //we are trying to mimic code above to listen for changes in songQueue
-
-
 
   },
 

@@ -11,9 +11,8 @@ var SongQueueView = Backbone.View.extend({
     // console.log("We have entered the SongQueueView initialization! ");
     this.render();
 
-    console.log("This is the colleciton thomas is interested in: ", this.collection);
      // sets up listeners for any changes to the queue Model
-    this.collection.on('change', function(collection){
+    this.collection.on('add', function(){
       console.log("We know we heard the change in the queue");
       // this.render();
     }, this);
@@ -29,10 +28,10 @@ var SongQueueView = Backbone.View.extend({
 
   //we need some method here that will add a song to the SongQueue.js collection
   //
-  addSong: function(song){
-    this.model = song;
-    this.render();
-  },
+  // addSong: function(song){
+  //   this.model = song;
+  //   this.render();
+  // },
 
 
   render: function() {

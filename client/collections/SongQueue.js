@@ -1,5 +1,6 @@
 // SongQueue.js - Defines a backbone model class for the song queue.
 var SongQueue = Songs.extend({
+  // model: SongModel,
   //define what actually happens with that whole collection: enqueuing, dequing
   //operating on the whole collection of models
   //
@@ -11,14 +12,14 @@ var SongQueue = Songs.extend({
   },
 
   // enqueue: function(song){
-
+  //   this.trigger('enqueue', this);
+  // },
 
 
   //   //do something with the song
   //   //somehow add it to the queue
   //   //update currentSong to the one at the top
   //   //
-  // },
 
   // dequeue: function(song){
   //   //somehow remove it from the queue
