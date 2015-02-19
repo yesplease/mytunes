@@ -8,11 +8,19 @@ var SongQueueView = Backbone.View.extend({
   initialize: function() {
 
     //first it renders it on the screen
+    // console.log("We have entered the SongQueueView initialization! ");
     this.render();
 
-     //sets up listeners for any changes to the queue Model
+     // sets up listeners for any changes to the queue Model
+    // this.collection.on('change', function(collection){
+    //   console.log("We know we heard the change in the queue");
+    //   this.render();
+    // }, this);
+    //
+
     this.collection.on('change', function(collection){
-      this.render();
+      console.log('We know we heard the change in the queue');
+      //this.queueView.render(); - this isn't right
     }, this);
   },
 

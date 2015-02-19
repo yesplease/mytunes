@@ -7,7 +7,7 @@ var SongModel = Backbone.Model.extend({
   },
 
   enqueue: function(){
-    console.log('You have clicked enqueued!');
+    // console.log('You have clicked enqueued!');
     this.trigger('enqueue', this);
   },
 

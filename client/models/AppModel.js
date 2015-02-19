@@ -22,7 +22,11 @@ var AppModel = Backbone.Model.extend({
 
       params.library.on('enqueue', function(song){
       //get the song itself, then push that song into the collection
+      console.log("This is the current model (AppModel): ", this);
       this.get('songQueue').push(song);
+      // console.log("This dot get songqueue's return: ", this.get('songQueue'));
+      console.log("you have pushed a song to the SongQueue collection!");
+      // console.dir(this);
        }, this);
   }
 

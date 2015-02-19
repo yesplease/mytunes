@@ -10,7 +10,14 @@ var AppView = Backbone.View.extend({
     // ONLY receive change events for the specific property, 'currentSong'
     //given code that listens for a change in the current song
     this.model.on('change:currentSong', function(model){
+      // console.dir("This is the this dot model: ", this.model);
       this.playerView.setSong(model.get('currentSong'));
+    }, this);
+
+
+    this.model.get('songQueue').on('change', function(model){
+      console.log('We know we heard the change in the queue', model);
+      //this.queueView.render(); - this isn't right
     }, this);
 
     //we are trying to mimic code above to listen for changes in songQueue

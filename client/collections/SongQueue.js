@@ -11,7 +11,7 @@ var SongQueue = Songs.extend({
   },
 
   enqueue: function(song){
-    //
+
 
 
     //do something with the song
