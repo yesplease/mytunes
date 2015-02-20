@@ -20,15 +20,7 @@ var AppView = Backbone.View.extend({
       this.playerView.setSong('');
     }, this);
 
-    // this.model.on('ended', function(model){
-    //   // console.dir("This is the this dot model: ", this.model);
-    //   this.playerView.nextSong(model.get('currentSong'));
-    // }, this);
 
-    // this.model.get('songQueue').on('change', function(model){
-    //   console.log('We know we heard the change in the queue');
-    //   //this.queueView.render(); - this isn't right
-    // }, this);
 
   },
 
