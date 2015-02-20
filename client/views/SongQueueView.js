@@ -3,35 +3,17 @@ var SongQueueView = Backbone.View.extend({
 
   tagName: "table",
 
-
-
   initialize: function() {
-
     //first it renders it on the screen
-    // console.log("We have entered the SongQueueView initialization! ");
     this.render();
 
-     // sets up listeners for any changes to the queue Model
-    this.collection.on('add', function(){
-      console.log("We know we heard the change in the queue");
-      // this.render();
+    // sets up listeners for any changes to the queue Model
+    this.collection.on('add remove', function(){
+      this.render();
     }, this);
-    //
 
-    // this.collection.on('change', function(collection){
-    //   console.log('We know we heard the change in the queue');
-    //   //this.queueView.render(); - this isn't right
-    // }, this);
   },
 
-
-
-  //we need some method here that will add a song to the SongQueue.js collection
-  //
-  // addSong: function(song){
-  //   this.model = song;
-  //   this.render();
-  // },
 
 
   render: function() {
@@ -48,26 +30,3 @@ var SongQueueView = Backbone.View.extend({
 
 });
 
-
-// // LibraryView.js - Defines a backbone view class for the music library.
-// var LibraryView = Backbone.View.extend({
-
-//   tagName: "table",
-
-//   initialize: function() {
-//     this.render();
-//   },
-
-//   render: function(){
-//     // to preserve event handlers on child nodes, we must call .detach() on them before overwriting with .html()
-//     // see http://api.jquery.com/detach/
-//     this.$el.children().detach();
-
-//     this.$el.html('<th>Library</th>').append(
-//       this.collection.map(function(song){
-//         return new LibraryEntryView({model: song}).render();
-//       })
-//     );
-//   }
-
-// });

@@ -14,6 +14,17 @@ var AppView = Backbone.View.extend({
       this.playerView.setSong(model.get('currentSong'));
     }, this);
 
+    //open question: where should I put stop?
+    //
+    this.model.on('stop', function(){
+      this.playerView.setSong('');
+    }, this);
+
+    // this.model.on('ended', function(model){
+    //   // console.dir("This is the this dot model: ", this.model);
+    //   this.playerView.nextSong(model.get('currentSong'));
+    // }, this);
+
     // this.model.get('songQueue').on('change', function(model){
     //   console.log('We know we heard the change in the queue');
     //   //this.queueView.render(); - this isn't right

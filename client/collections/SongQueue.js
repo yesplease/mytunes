@@ -9,19 +9,36 @@ var SongQueue = Songs.extend({
   ////actually functionaliy of enqueue, such as play this song
 
   initialize: function(){
+    //adds the listeners upon initialization?
+    //why do we need that final 'this'?
+    this.on('add', this.enqueue, this);
+    this.on('dequeue', this.dequeue, this);
+    this.on('ended', this.playNext, this);
+
   },
 
-  // enqueue: function(song){
-  //   this.trigger('enqueue', this);
-  // },
+  enqueue: function(song){
+   if( this.length === 1 ){
+    this.playFirst();
+   }
+  },
+
+  dequeue: function(song){
+    this.remove(song);
+  },
+
+  playFirst: function(){
+    this.at(0).play();
+  },
+
+  playNext: function(){
+    this.shift();
+    if(this.length >=1){
+      this.playFirst();
+    } else {
+      this.trigger('stop');
+    }
+  }
 
 
-  //   //do something with the song
-  //   //somehow add it to the queue
-  //   //update currentSong to the one at the top
-  //   //
-
-  // dequeue: function(song){
-  //   //somehow remove it from the queue
-  // }
 });
